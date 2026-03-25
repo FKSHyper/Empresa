@@ -16,5 +16,10 @@ namespace Empresa
         {
             InitializeComponent();
         }
+
+        private void TxtNcolab_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

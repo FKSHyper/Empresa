@@ -103,6 +103,7 @@
             TxtNcolab.Size = new Size(172, 18);
             TxtNcolab.TabIndex = 6;
             TxtNcolab.Text = "";
+            TxtNcolab.TextChanged += TxtNcolab_TextChanged;
             // 
             // TxtValorGasto
             // 

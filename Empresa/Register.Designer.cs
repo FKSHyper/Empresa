@@ -80,6 +80,7 @@ namespace Empresa
             typeContractBox.Name = "typeContractBox";
             typeContractBox.Size = new Size(193, 23);
             typeContractBox.TabIndex = 3;
+            typeContractBox.SelectedIndexChanged += typeContractBox_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -137,6 +138,7 @@ namespace Empresa
             btnAdd.TabIndex = 14;
             btnAdd.Text = "Adicionar";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // panelFree
             // 
