@@ -8,12 +8,26 @@ namespace Empresa
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void btnRegisto_Click(object sender, EventArgs e)
         {
-            Register registro = new Register();
+            this.Hide();
+            Registo registo = new Registo();
+            registo.Show();
+        }
 
-            registro.Show();
+        private void btnDetalhes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Detalhes detalhes = new Detalhes();
+            detalhes.Show();
+        }
+
+        private void btnEstat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Estatisticas estat = new Estatisticas();
+            estat.Show();
         }
     }
 }
