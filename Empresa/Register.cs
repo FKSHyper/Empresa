@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,9 @@ namespace Empresa
 
         public List<Freelancer> Freelancers { get; set; }
 
-        public Register()
+
+
+        public Register(List<Efetivo> efetivos, List<Freelancer> freelancers)
         {
             InitializeComponent();
 
@@ -46,13 +49,17 @@ namespace Empresa
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            double valorHora = double.Parse(valueHourTxt.Text);
+            double salario = double.Parse(salaryTxt.Text);
+            int horas = Convert.ToInt32(hoursTxt.Text);
+
             if (typeContractBox.Text == "Efetivo")
             {
-                Efetivos = new Efetivo(nameTxt.Text, AlimTxt.Text, salaryTxt.Text, typeContractBox.Text);
+                Efetivos.Add(new Efetivo(nameTxt.Text, double.Parse(AlimTxt.Text), salario, typeContractBox.Text));
             }
             else
             {
-                Freelancers = new Freelancer(nameTxt.Text, salaryTxt.Text, hoursTxt.Text, valueHourTxt.Text, typeContractBox.Text);
+                Freelancers.Add(new Freelancer(nameTxt.Text, salario, horas, valorHora, typeContractBox.Text));
             }
         }
     }

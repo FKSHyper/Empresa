@@ -1,6 +1,6 @@
 ﻿namespace Empresa.Classes
 {
-    abstract class Colaborador
+    public abstract class Colaborador
     {
         private string _nome;
 
@@ -8,18 +8,18 @@
 
         private double _salarioBase;
 
-        private string _tipoContrato;
+        public string tipoContrato;
 
         public abstract double CalcularVencimento();
 
         Random random = new Random();
 
-        public Colaborador(string nome, double salarioBase, string tipoContrato)
+        public Colaborador(string nome, double salarioBase, string _tipoContrato)
         {
             _nome = nome;
             _salarioBase = salarioBase;
             Id = random.Next(1, 999);
-            _tipoContrato = tipoContrato;
+            tipoContrato = _tipoContrato;
         }
 
         public double SalarioBase()

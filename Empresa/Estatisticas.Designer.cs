@@ -40,6 +40,7 @@
             TxtImpostos = new RichTextBox();
             TxtEMP = new RichTextBox();
             TxtEGA = new RichTextBox();
+            btnPesquisar = new Button();
             SuspendLayout();
             // 
             // lbNcolab
@@ -47,9 +48,9 @@
             lbNcolab.AutoSize = true;
             lbNcolab.Location = new Point(12, 9);
             lbNcolab.Name = "lbNcolab";
-            lbNcolab.Size = new Size(90, 15);
+            lbNcolab.Size = new Size(101, 15);
             lbNcolab.TabIndex = 0;
-            lbNcolab.Text = "Nº Colaborador";
+            lbNcolab.Text = "Nº Colaboradores";
             // 
             // lbValorGasto
             // 
@@ -144,11 +145,22 @@
             TxtEGA.TabIndex = 11;
             TxtEGA.Text = "";
             // 
+            // btnPesquisar
+            // 
+            btnPesquisar.Location = new Point(380, 8);
+            btnPesquisar.Name = "btnPesquisar";
+            btnPesquisar.Size = new Size(75, 23);
+            btnPesquisar.TabIndex = 12;
+            btnPesquisar.Text = "Pesquisar";
+            btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
+            // 
             // Estatisticas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(387, 230);
+            ClientSize = new Size(467, 230);
+            Controls.Add(btnPesquisar);
             Controls.Add(TxtEGA);
             Controls.Add(TxtEMP);
             Controls.Add(TxtImpostos);
@@ -181,5 +193,6 @@
         private RichTextBox TxtImpostos;
         private RichTextBox TxtEMP;
         private RichTextBox TxtEGA;
+        private Button btnPesquisar;
     }
 }
