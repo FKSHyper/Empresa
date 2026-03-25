@@ -31,19 +31,12 @@ namespace Empresa
             double impostos = somaSalarios * 0.11;
             double EGA = (somaSalarios - impostos) * 12;
 
+            List<Colaborador> colaboradors = new List<Colaborador>();
+            colaboradors.AddRange(efetivosEstat);
+                colaboradors.AddRange(freelancersEstat);
 
-            if (efetivosEstat.Max(e => e.SalarioBase()) > freelancersEstat.Max(e => e.SalarioBase()))
-            {
-                TxtEMP.Text = (efetivosEstat).ToString();
-            }
-            else if (efetivosEstat.Max(e => e.SalarioBase()) < freelancersEstat.Max(e => e.SalarioBase()))
-            {
-                TxtEMP.Text = (efetivosEstat).ToString();
-            }
-            else
-            {
-                TxtEMP.Text = (efetivosEstat).ToString() + " " + (efetivosEstat).ToString();
-            }
+            colaboradors.Max(e => e.SalarioBase());
+
 
             TxtNcolab.Text = (Ncolab).ToString();
             TxtValorGasto.Text = (somaSalarios).ToString();

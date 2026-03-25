@@ -56,15 +56,15 @@ namespace Empresa
             if (typeContractBox.Text == "Efetivo")
             {
                 Efetivos.Add(new Efetivo(nameTxt.Text, double.Parse(AlimTxt.Text), salario, typeContractBox.Text));
-                this.Close();
-                Form1.Show();
+                
             }
             else
             {
                 Freelancers.Add(new Freelancer(nameTxt.Text, salario, horas, valorHora, typeContractBox.Text));
-                this.Close();
-                Form1.Show();
             }
+
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

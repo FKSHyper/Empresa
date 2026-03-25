@@ -21,7 +21,11 @@ namespace Empresa
             Register registo = new Register(efetivos, freelancers);
             registo.IsEfetivo = true;
 
-            registo.Show();
+            if(registo.ShowDialog() == DialogResult.OK)
+            {
+                efetivos.AddRange(registo.Efetivos);
+                freelancers.AddRange(registo.Freelancers);
+            }
         }
 
         private void btnDetalhes_Click(object sender, EventArgs e)
