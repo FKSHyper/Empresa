@@ -44,13 +44,17 @@ namespace Empresa
             valueHourTxt = new TextBox();
             btnAdd = new Button();
             panelFree = new Panel();
+            labelAlim = new Label();
+            AlimTxt = new TextBox();
+            panelEfe = new Panel();
             panelFree.SuspendLayout();
+            panelEfe.SuspendLayout();
             SuspendLayout();
             // 
             // labelName
             // 
             labelName.AutoSize = true;
-            labelName.Location = new Point(79, 80);
+            labelName.Location = new Point(79, 78);
             labelName.Name = "labelName";
             labelName.Size = new Size(40, 15);
             labelName.TabIndex = 0;
@@ -59,7 +63,7 @@ namespace Empresa
             // TypeContact
             // 
             TypeContact.AutoSize = true;
-            TypeContact.Location = new Point(24, 117);
+            TypeContact.Location = new Point(24, 115);
             TypeContact.Name = "TypeContact";
             TypeContact.Size = new Size(95, 15);
             TypeContact.TabIndex = 1;
@@ -67,7 +71,7 @@ namespace Empresa
             // 
             // nameTxt
             // 
-            nameTxt.Location = new Point(135, 77);
+            nameTxt.Location = new Point(135, 75);
             nameTxt.Name = "nameTxt";
             nameTxt.Size = new Size(194, 23);
             nameTxt.TabIndex = 2;
@@ -76,7 +80,7 @@ namespace Empresa
             // 
             typeContractBox.FormattingEnabled = true;
             typeContractBox.Items.AddRange(new object[] { "Efetivo", "Freelancer" });
-            typeContractBox.Location = new Point(135, 114);
+            typeContractBox.Location = new Point(135, 112);
             typeContractBox.Name = "typeContractBox";
             typeContractBox.Size = new Size(193, 23);
             typeContractBox.TabIndex = 3;
@@ -84,7 +88,7 @@ namespace Empresa
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(50, 157);
+            label1.Location = new Point(50, 155);
             label1.Name = "label1";
             label1.Size = new Size(69, 15);
             label1.TabIndex = 4;
@@ -92,7 +96,7 @@ namespace Empresa
             // 
             // salaryTxt
             // 
-            salaryTxt.Location = new Point(134, 154);
+            salaryTxt.Location = new Point(134, 152);
             salaryTxt.Name = "salaryTxt";
             salaryTxt.Size = new Size(194, 23);
             salaryTxt.TabIndex = 5;
@@ -149,11 +153,37 @@ namespace Empresa
             panelFree.Size = new Size(332, 80);
             panelFree.TabIndex = 15;
             // 
+            // labelAlim
+            // 
+            labelAlim.AutoSize = true;
+            labelAlim.Location = new Point(4, 11);
+            labelAlim.Name = "labelAlim";
+            labelAlim.Size = new Size(97, 15);
+            labelAlim.TabIndex = 16;
+            labelAlim.Text = "Sub Alimentação";
+            // 
+            // AlimTxt
+            // 
+            AlimTxt.Location = new Point(117, 9);
+            AlimTxt.Name = "AlimTxt";
+            AlimTxt.Size = new Size(194, 23);
+            AlimTxt.TabIndex = 17;
+            // 
+            // panelEfe
+            // 
+            panelEfe.Controls.Add(AlimTxt);
+            panelEfe.Controls.Add(labelAlim);
+            panelEfe.Location = new Point(17, 185);
+            panelEfe.Name = "panelEfe";
+            panelEfe.Size = new Size(353, 36);
+            panelEfe.TabIndex = 18;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(462, 364);
+            Controls.Add(panelEfe);
             Controls.Add(panelFree);
             Controls.Add(btnAdd);
             Controls.Add(salaryTxt);
@@ -166,6 +196,8 @@ namespace Empresa
             Text = "Form Registro";
             panelFree.ResumeLayout(false);
             panelFree.PerformLayout();
+            panelEfe.ResumeLayout(false);
+            panelEfe.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,5 +220,8 @@ namespace Empresa
         private Panel panelSearch;
         private Button btnAdd;
         private Panel panelFree;
+        private Label labelAlim;
+        private TextBox AlimTxt;
+        private Panel panelEfe;
     }
 }

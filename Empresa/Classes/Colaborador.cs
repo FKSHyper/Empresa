@@ -8,15 +8,18 @@
 
         private double _salarioBase;
 
+        private string _tipoContrato;
+
         public abstract double CalcularVencimento();
 
         Random random = new Random();
 
-        public Colaborador(string nome, double salarioBase)
+        public Colaborador(string nome, double salarioBase, string tipoContrato)
         {
             _nome = nome;
             _salarioBase = salarioBase;
             Id = random.Next(1, 999);
+            _tipoContrato = tipoContrato;
         }
 
         public double SalarioBase()
