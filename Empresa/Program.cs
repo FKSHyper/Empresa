@@ -1,3 +1,5 @@
+using System;
+using System.Windows.Forms;
 namespace Empresa
 {
     internal static class Program

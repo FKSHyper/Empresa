@@ -1,6 +1,6 @@
 ﻿namespace Empresa.Classes
 {
-    internal class Efetivo : Colaborador
+    public class Efetivo : Colaborador
     {
         public double SubsidioAlimentacao { get; set; }
 

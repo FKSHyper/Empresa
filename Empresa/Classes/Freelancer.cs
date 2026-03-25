@@ -1,6 +1,6 @@
 ﻿namespace Empresa.Classes
 {
-    internal class Freelancer : Colaborador
+    public class Freelancer : Colaborador
     {
         public int HorasExtra { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace Empresa.Classes
 {
-    abstract class Colaborador
+    public abstract class Colaborador
     {
         private string _nome;
 
