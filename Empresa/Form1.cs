@@ -12,7 +12,7 @@ namespace Empresa
         private void btnRegisto_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Registo registo = new Registo();
+            Register registo = new Register();
             registo.Show();
         }
 
