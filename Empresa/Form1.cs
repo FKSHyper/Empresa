@@ -1,3 +1,5 @@
+using static Empresa.Register;
+
 namespace Empresa
 {
     public partial class Form1 : Form
@@ -6,7 +8,7 @@ namespace Empresa
         {
             InitializeComponent();
         }
-
+        
         private void btnRegisto_Click(object sender, EventArgs e)
         {
             this.Hide();
