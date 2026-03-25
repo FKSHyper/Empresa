@@ -20,6 +20,7 @@ namespace Empresa
             this.Hide();
             Register registo = new Register(efetivos, freelancers);
             registo.IsEfetivo = true;
+
             registo.Show();
         }
 

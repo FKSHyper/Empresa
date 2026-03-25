@@ -4,7 +4,7 @@
     {
         public double SubsidioAlimentacao { get; set; }
 
-        public Efetivo(string nome, double subsidioAlimentacao, double salarioBase) : base(nome, salarioBase)
+        public Efetivo(string nome, double subsidioAlimentacao, double salarioBase, string _tipoContrato) : base(nome, salarioBase, _tipoContrato)
         {
             SubsidioAlimentacao = subsidioAlimentacao;
         }
