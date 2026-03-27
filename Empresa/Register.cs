@@ -83,6 +83,7 @@ namespace Empresa
             }
 
             DialogResult = DialogResult.OK;
+
             this.Close();
         }
     }

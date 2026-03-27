@@ -18,10 +18,18 @@ namespace Empresa
         private void btnRegisto_Click(object sender, EventArgs e)
         {
             this.Hide();
+
+            
+
             Register registo = new Register(efetivos, freelancers);
+            if (registo.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
+
             registo.IsEfetivo = true;
 
-            registo.Show();
+            
         }
 
         private void btnDetalhes_Click(object sender, EventArgs e)
