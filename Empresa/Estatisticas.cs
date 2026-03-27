@@ -33,15 +33,13 @@ namespace Empresa
 
             List<Colaborador> colaboradors = new List<Colaborador>();
             colaboradors.AddRange(efetivosEstat);
-                colaboradors.AddRange(freelancersEstat);
-
-            colaboradors.Max(e => e.SalarioBase());
-
+            colaboradors.AddRange(freelancersEstat);
 
             TxtNcolab.Text = (Ncolab).ToString();
             TxtValorGasto.Text = (somaSalarios).ToString();
             TxtMsB.Text = (somaSalarios / Ncolab).ToString();
             TxtImpostos.Text = (impostos).ToString();
+            TxtEMP.Text = (colaboradors.Max(e => e.SalarioBase())).ToString();
             TxtEGA.Text = (EGA).ToString();
         }
     }
