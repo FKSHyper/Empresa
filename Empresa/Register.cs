@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -48,10 +49,10 @@ namespace Empresa
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
-        {
-            double valorHora;
-            double salario;
-            double alimentacao;
+        {           
+            double valorHora = double.Parse(valueHourTxt.Text);
+            double salario = double.Parse(salaryTxt.Text);
+            int horas = Convert.ToInt32(hoursTxt.Text);
 
             if (typeContractBox.Text == "Freelancer")
             {
