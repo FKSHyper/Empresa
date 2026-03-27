@@ -49,10 +49,10 @@ namespace Empresa
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
-        {           
-            double valorHora = double.Parse(valueHourTxt.Text);
-            double salario = double.Parse(salaryTxt.Text);
-            int horas = Convert.ToInt32(hoursTxt.Text);
+        {
+            double valorHora;
+            double salario;
+            double alimentacao;
 
             if (typeContractBox.Text == "Freelancer")
             {
@@ -62,8 +62,8 @@ namespace Empresa
                 {
                     MessageBox.Show("Valor por hora inválido!");
                     return;
-                }                
-                
+                }
+
                 Freelancers.Add(new Freelancer(nameTxt.Text, 0, horas, valorHora, typeContractBox.Text));
             }
             else
