@@ -1,4 +1,5 @@
 using Empresa.Classes;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using static Empresa.Register;
 
@@ -19,18 +20,13 @@ namespace Empresa
         {
             this.Hide();
 
-            
-
             Register registo = new Register(efetivos, freelancers);
-            if (registo.ShowDialog() == DialogResult.OK)
-            {
-                this.Show();
-            }
 
             registo.IsEfetivo = true;
 
             if(registo.ShowDialog() == DialogResult.OK)
             {
+                this.Show();
                 efetivos.AddRange(registo.Efetivos);
                 freelancers.AddRange(registo.Freelancers);
             }
@@ -45,9 +41,10 @@ namespace Empresa
 
         private void btnEstat_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Estatisticas estat = new Estatisticas(efetivos, freelancers);
+            btnEstat.Enabled = false;
             estat.Show();
+            estat.FormClosed += (s, args) => btnEstat.Enabled = true;
         }
     }
 }
