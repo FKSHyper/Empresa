@@ -45,20 +45,20 @@ namespace Empresa
 
             nameTxtDet.Text = colaborador.Nome();
 
-                if (colaborador is Efetivo efetivo)
-                {
-                    panelFree.Visible = false;
-                    panelEfe.Visible = true;
-                    typeContractBoxDet.Text = "Efetivo";
-                    txt_SubAlimentação.Text = efetivo.SubsidioAlimentacao.ToString();
+            if (colaborador is Efetivo efetivo)
+            {
+                panelEfe.Visible = true;
+                typeContractBoxDet.Text = "Efetivo";
+                txt_SubAlimentação.Text = efetivo.SubsidioAlimentacao.ToString();
+                salaryTxtDet.Text = efetivo.SalarioBase().ToString();
             }
-                else if (colaborador is Freelancer freelancer)
-                {
-                    panelEfe.Visible = false;
-                    panelFree.Visible = true;
-                    nameTxtDet.Text = "Freelancer";
-                    hoursTxtDet.Text = freelancer.HorasExtra.ToString();
-                }
+            else if (colaborador is Freelancer freelancer)
+            {
+                panelFree.Visible = true;
+                typeContractBoxDet.Text = "Freelancer";
+                hoursTxtDet.Text = freelancer.HorasExtra.ToString();
+                valueHourTxtDet.Text = freelancer.ValorHora.ToString();
+            }
         }
 
         private void txt_ID_TextChanged(object sender, EventArgs e)

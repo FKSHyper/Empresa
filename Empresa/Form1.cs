@@ -34,7 +34,6 @@ namespace Empresa
 
         private void btnDetalhes_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Detalhes detalhes = new Detalhes(efetivos, freelancers);
             detalhes.Show();
         }
