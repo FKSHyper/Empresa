@@ -64,7 +64,11 @@ namespace Empresa
                     return;
                 }
 
-                Freelancers.Add(new Freelancer(nameTxt.Text, 0, horas, valorHora, typeContractBox.Text));
+                Freelancer novoFreelancer = new Freelancer(nameTxt.Text, 0, horas, valorHora, typeContractBox.Text);
+
+                Freelancers.Add(novoFreelancer);
+
+                MessageBox.Show($"Colaborador registrado com o Id: {novoFreelancer.Id}");
             }
             else
             {
@@ -80,7 +84,11 @@ namespace Empresa
                     return;
                 }
 
-                Efetivos.Add(new Efetivo(nameTxt.Text, alimentacao, salario, typeContractBox.Text));
+                Efetivo novoEfetivo = new Efetivo(nameTxt.Text, alimentacao, salario, typeContractBox.Text);
+
+                Efetivos.Add(novoEfetivo);
+
+                MessageBox.Show($"Colaborador registrado com o Id: {novoEfetivo.Id}");
             }
 
             DialogResult = DialogResult.OK;
