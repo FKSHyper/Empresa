@@ -49,21 +49,41 @@ namespace Empresa
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            double valorHora = double.Parse(valueHourTxt.Text);
-            double salario = double.Parse(salaryTxt.Text);
-            int horas = Convert.ToInt32(hoursTxt.Text);
+            double valorHora;
+            double salario;
+            double alimentacao;
 
-            if (typeContractBox.Text == "Efetivo")
+            if (typeContractBox.Text == "Freelancer")
             {
-                Efetivos.Add(new Efetivo(nameTxt.Text, double.Parse(AlimTxt.Text), salario, typeContractBox.Text));
+                int horas = Convert.ToInt32(hoursTxt.Text);
+
+                if (!double.TryParse(valueHourTxt.Text, out valorHora))
+                {
+                    MessageBox.Show("Valor por hora inválido!");
+                    return;
+                }                
                 
+                Freelancers.Add(new Freelancer(nameTxt.Text, 0, horas, valorHora, typeContractBox.Text));
             }
             else
             {
-                Freelancers.Add(new Freelancer(nameTxt.Text, salario, horas, valorHora, typeContractBox.Text));
+                if (!double.TryParse(salaryTxt.Text, out salario))
+                {
+                    MessageBox.Show("Salário inválido!");
+                    return;
+                }
+
+                if (!double.TryParse(AlimTxt.Text, out alimentacao))
+                {
+                    MessageBox.Show("Salário inválido!");
+                    return;
+                }
+
+                Efetivos.Add(new Efetivo(nameTxt.Text, alimentacao, salario, typeContractBox.Text));
             }
 
             DialogResult = DialogResult.OK;
+
             this.Close();
         }
     }

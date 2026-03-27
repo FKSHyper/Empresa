@@ -49,9 +49,9 @@
             panelFree.Controls.Add(hoursTxtDet);
             panelFree.Controls.Add(label3);
             panelFree.Controls.Add(label2);
-            panelFree.Location = new Point(15, 119);
+            panelFree.Location = new Point(15, 155);
             panelFree.Name = "panelFree";
-            panelFree.Size = new Size(332, 80);
+            panelFree.Size = new Size(316, 67);
             panelFree.TabIndex = 23;
             // 
             // valueHourTxtDet
@@ -82,7 +82,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(19, 10);
             label2.Name = "label2";
-            label2.Size = new Size(66, 15);
+            label2.Size = new Size(67, 15);
             label2.TabIndex = 6;
             label2.Text = "Horas extra";
             // 
@@ -98,7 +98,7 @@
             // 
             // salaryTxtDet
             // 
-            salaryTxtDet.Location = new Point(115, 85);
+            salaryTxtDet.Location = new Point(115, 121);
             salaryTxtDet.Name = "salaryTxtDet";
             salaryTxtDet.Size = new Size(194, 23);
             salaryTxtDet.TabIndex = 21;
@@ -106,7 +106,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(31, 88);
+            label1.Location = new Point(31, 124);
             label1.Name = "label1";
             label1.Size = new Size(69, 15);
             label1.TabIndex = 20;
@@ -116,14 +116,14 @@
             // 
             typeContractBoxDet.FormattingEnabled = true;
             typeContractBoxDet.Items.AddRange(new object[] { "Efetivo", "Freelancer" });
-            typeContractBoxDet.Location = new Point(116, 45);
+            typeContractBoxDet.Location = new Point(116, 81);
             typeContractBoxDet.Name = "typeContractBoxDet";
             typeContractBoxDet.Size = new Size(193, 23);
             typeContractBoxDet.TabIndex = 19;
             // 
             // nameTxtDet
             // 
-            nameTxtDet.Location = new Point(116, 8);
+            nameTxtDet.Location = new Point(116, 44);
             nameTxtDet.Name = "nameTxtDet";
             nameTxtDet.Size = new Size(194, 23);
             nameTxtDet.TabIndex = 18;
@@ -131,16 +131,16 @@
             // TypeContact
             // 
             TypeContact.AutoSize = true;
-            TypeContact.Location = new Point(5, 48);
+            TypeContact.Location = new Point(5, 84);
             TypeContact.Name = "TypeContact";
-            TypeContact.Size = new Size(95, 15);
+            TypeContact.Size = new Size(94, 15);
             TypeContact.TabIndex = 17;
             TypeContact.Text = "Tipo de contrato";
             // 
             // labelName
             // 
             labelName.AutoSize = true;
-            labelName.Location = new Point(60, 11);
+            labelName.Location = new Point(60, 47);
             labelName.Name = "labelName";
             labelName.Size = new Size(40, 15);
             labelName.TabIndex = 16;

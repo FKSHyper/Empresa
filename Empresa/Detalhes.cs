@@ -29,7 +29,7 @@ namespace Empresa
 
         private void btnPesquisarDet_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
