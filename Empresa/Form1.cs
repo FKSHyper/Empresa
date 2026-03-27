@@ -29,7 +29,11 @@ namespace Empresa
 
             registo.IsEfetivo = true;
 
-            
+            if(registo.ShowDialog() == DialogResult.OK)
+            {
+                efetivos.AddRange(registo.Efetivos);
+                freelancers.AddRange(registo.Freelancers);
+            }
         }
 
         private void btnDetalhes_Click(object sender, EventArgs e)
